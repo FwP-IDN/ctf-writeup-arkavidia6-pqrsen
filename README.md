@@ -57,7 +57,7 @@ c1 = c × s<sup>2</sup> = (r×m)<sup>e×2</sup>
 
 c1 seharusnya dapat diselesaikan dengan decrypt RSA biasa. Namun kita membutuhkan p dan q bagaimana mencarinya?
 
-perlu diketahui bahwa pangkat dari p pada variabel r adalah minus 3 sementara pangkat dari variabel p pada s adalah 2. Jika kita kalikan r<sup>2</sup> × s<sup>3</sup> =  p<sup>-6</sup> × (p<sup>2</sup> - q<sup>e</sup>)<sup>3</sup> = (1 - q<sup>e</sup> × p<sup>-2</sup><sup>3</sup> ≡ 1 mod q
+perlu diketahui bahwa pangkat dari p pada variabel r adalah minus 3 sementara pangkat dari variabel p pada s adalah 2. Jika kita kalikan r<sup>2</sup> × s<sup>3</sup> =  p<sup>-6</sup> × (p<sup>2</sup> - q<sup>e</sup>)<sup>3</sup> = 1 - q<sup>e</sup> × p<sup>-2</sup> ≡ 1 mod q
 
 Dari sini kita dapat simpulkan bahwa r<sup>2</sup> × s<sup>3</sup>  ≡ 1 mod q sehingga GCD(r<sup>2</sup> × s<sup>3</sup> - 1, n) = q
 
