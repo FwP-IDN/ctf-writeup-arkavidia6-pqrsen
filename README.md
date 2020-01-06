@@ -3,7 +3,7 @@
 Kategori: Crypto
 
 
-Desc singkat: diberikan sebuah kodingan, pubkey, dan ciphertext kemudian decrypt ciphertext. Pada pubkey terdapat informasi tambahan.
+Desc singkat: diberikan sebuah kodingan, pubkey, dan ciphertext kemudian decrypt ciphertext. Pada pubkey terdapat informasi tambahan berupa nilai dari variable r dan s.
 
 Berikut adalah kodingan yang diberikan
 
