@@ -53,9 +53,9 @@ c = ((r×m)<sup>e</sup> × (s<sup>-1</sup>))<sup>2</sup> = (r×m)<sup>e×2</sup>
 
 Kemudian kita kita kalikan c dengan s<sup>2</sup> untuk mengurangi "keruwetan"
 
-c1 = c × s<sup>2</sup> = (r×m)<sup>e×2</sup>
+c<sub>1</sub> = c × s<sup>2</sup> = (r×m)<sup>e×2</sup>
 
-c1 seharusnya dapat diselesaikan dengan decrypt RSA biasa. Namun kita membutuhkan p dan q bagaimana mencarinya?
+c<sub>1</sub> seharusnya dapat diselesaikan dengan decrypt RSA biasa. Namun kita membutuhkan p dan q bagaimana mencarinya?
 
 perlu diketahui bahwa pangkat dari p pada variabel r adalah minus 3 sementara pangkat dari variabel p pada s adalah 2. Jika kita kalikan r<sup>2</sup> × s<sup>3</sup> =  p<sup>-6</sup> × (p<sup>2</sup> - q<sup>e</sup>)<sup>3</sup> = 1 - q<sup>e</sup> × p<sup>-2</sup> ≡ 1 mod q
 
@@ -64,11 +64,11 @@ Dari sini kita dapat simpulkan bahwa r<sup>2</sup> × s<sup>3</sup>  ≡ 1 mod q
 
 setelah mendapat q, p = n / q
 
-Dan dari c1 = (r×m)<sup>e×2</sup> = ((r×m)<sup>2</sup>)<sup>e</sup>, dengan RSA decryption, kita mendapatkan c2 = RSA_decrypt(c1) = (r×m)<sup>2</sup>. 
+Dan dari c<sub>1</sub> = (r×m)<sup>e×2</sup> = ((r×m)<sup>2</sup>)<sup>e</sup>, dengan RSA decryption, kita mendapatkan c<sub>2</sub> = RSA_decrypt(c<sub>1</sub>) = (r×m)<sup>2</sup>. 
 
-c2 = r<sup>2</sup> × m<sup>2</sup>
+c<sub>2</sub> = r<sup>2</sup> × m<sup>2</sup>
 
-Kemudian kita invers r<sup>2</sup> dan dikalikan c2 untuk mendapatkan m<sup>2</sup>. Cari akar pangkat 2 dari m<sup>2</sup> dan mendapatkan m. (NB: cara ini tidak berkali jika m > min(p, q)).
+Kemudian kita invers r<sup>2</sup> dan dikalikan c<sub>2</sub> untuk mendapatkan m<sup>2</sup>. Cari akar pangkat 2 dari m<sup>2</sup> dan mendapatkan m. (NB: cara ini tidak berkali jika m > min(p, q)).
 
 Berikut adalah full solvernya. 
 
